@@ -1,9 +1,10 @@
 section {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     padding: 2em;
     overflow: auto;
+    flex-wrap: wrap;
 
 }
 
@@ -21,6 +22,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
 }
 
 .projects>div {
@@ -31,4 +33,73 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+nav{
+    width: 20vw;
+    height: 100%;
+    background: transparent linear-gradient(124deg, #186DD2 0%, #293D9F 100%) 0% 0% no-repeat padding-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+@media only screen and (max-device-width: 420px) {
+
+    *{
+        font-size: 35px;
+    }
+    .search-bar {
+
+
+        padding:0 0.5em
+    }
+
+
+    .base-container{
+        flex-direction: column;
+    }
+
+    nav{
+        flex-direction: column;
+        height:35%;
+        width:100%
+    }
+    nav > img {
+        width:50%;
+        margin:1em auto;
+    }
+ .button{
+     width:100%;
+     padding: 0.5em;
+     
+ }
+
+    li {
+        display:flex;
+        width: 100%;
+
+    }
+    ul {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    li:last-child {
+        position:relative;
+    
+    }
+    main{
+        width:100vw;
+    }
+    header{
+        padding: 0.5em 0.5em;
+    }
+    form {
+        width:100%;
+    }
+    .add-car {
+        width: 40%;
+    }
+
 }

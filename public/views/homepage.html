@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "../css/home.css">
+    <title>HOME PAGE</title>
+
+</head>
+
+<body>
+
+    <div class = "container">
+
+
+        <div class = "login-container">
+            <h1 style = "text-align: center;">Find Your Perfect Drift-Car</h1>
+            <form class = "login">
+                <label for="cars">Choose a Make and Model</label>
+                <select name="cars" id="cars">
+                  <optgroup label="Mercedes-Benz">
+                    <option value="C-Class">C-Class</option>
+                    <option value="E-Class">E-Class</option>
+                  </optgroup>
+                  <optgroup label="BMW">
+                    <option value="3 Series">3 Series</option>
+                    <option value="5 Series">5 Series</option>
+                  </optgroup>
+                  <optgroup label="Mazda">
+                    <option value="MX-3">MX-3</option>
+                    <option value="MX-5">MX-5</option>
+                    <option value="RX-8">RX-8</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="Other Make and Model">Other Make and Model</option>
+                  </optgroup>
+                </select>
+                <input name = "Min Year" type = "text" placeholder = "Min Year">
+                <input name = "Max Year" type = "text" placeholder = "Max Year">
+             </form>
+        </div>
+        <div class = "logo">
+            <img src="../img/logo.svg">          
+        </div>
+    </div>
+</body>
