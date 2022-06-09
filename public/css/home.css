@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: transparent linear-gradient(124deg, #186DD2 0%, #293D9F 100%) 0% 0% no-repeat padding-box;
     display: flex;
@@ -14,17 +14,21 @@ body {
 }
 .login-container {
     padding: 0 2em;
-    width:50%
+    width:60%
 }
 .logo {
 
 width: 30%;
 text-align: center;
-padding:0 2 em;
+padding:0 1em;
 }
 
 .register-text{
     color:white;
+}
+img {
+    height: 70%;
+    width: 70%;
 }
 
 form.login {
@@ -32,9 +36,10 @@ form.login {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 40vh;
-    background: #114058 0% 0% no-repeat padding-box;
+    height: 45vh;
+    background: #411ca7 0% 0% no-repeat padding-box;
     mix-blend-mode: luminosity;
     border: 1px solid #707070;
     border-radius: 77px;
@@ -43,18 +48,29 @@ form.login {
 
 button{
 
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+
     mix-blend-mode: overlay;
     border: 1px solid #707070;
     border-radius: 32px;
-    width: 50%;
+    width: 40%;
     border: none;
     color: black;
     margin: 1em;
     line-height: 2.5em;
+    font-weight: bold;
 }
 
+select {
+    color: rgb(107, 119, 129);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+    width: 30%;
+    
+
+}
 input {
     color: white;
     background-color: transparent;
@@ -62,8 +78,15 @@ input {
     border-bottom: 1px solid gray;
     padding: 1em;
     margin: 1em;
-    width: 50%;
+    width: 27%;
+
 }
+.makeAndModel{
+    color:white;
+    font-size: 1em;
+    padding: 2% 0% 0% 4%;
+}
+
 
 
 @media only screen and (max-device-width: 420px) {
@@ -77,11 +100,12 @@ input {
         font-size: 35px;
     }
     .login-container{
-        width: 100vw;
-    }
-    .logo {
         width: 80vw;
     }
+    .logo {
+        width: 90vw;
+    }
+
     form {
             margin: auto;
             width: 80vw;

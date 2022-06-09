@@ -89,6 +89,9 @@ input {
         height: 20em;
         width: 20em;
     }
+    form.login{
+        height:100%;
+    }
 
 }
 
