@@ -10,9 +10,7 @@ class DefaultController extends AppController {
      }
  
 
-    public function advertisement (){
-        $this->render('advertisement');
-    }
+
     public function register (){
         $this->render('register');
     }

@@ -53,38 +53,16 @@
 
             </header>
             <section class = "projects">
+                <?php foreach($projects as $project): ?>
                 <div id = "project-1"> 
-                    <img src ="public/img/uploads/<?= $project->getImage()?>">
+                    <img src ="public/img/uploads/<?= $project->getImage() ?>">
                     <div>
-                        <h2><?= $project->getTitle()?></h2>
-                        <p><?= $project->getDescription()?></p>
+                        <h2><?= $project->getTitle(); ?></h2>
+                        <p><?= $project->getDescription(); ?></p>
                     </div>
-                    
+
                 </div>
-                <div id = "project-1"> 
-                    <img src ="public/img/uploads/foto_manipulacja.PNG">
-                    <div>
-                        <h2>Title</h2>
-                        <p>description</p>
-                    </div>
-                    
-                </div>
-                <div id = "project-1"> 
-                    <img src ="public/img/uploads/foto_manipulacja.PNG">
-                    <div>
-                        <h2>Title</h2>
-                        <p>description</p>
-                    </div>
-                    
-                </div>
-                <div id = "project-1"> 
-                    <img src ="public/img/uploads/foto_manipulacja.PNG">
-                    <div>
-                        <h2>Title</h2>
-                        <p>description</p>
-                    </div>
-                    
-                </div>
+                <?php endforeach; ?>
             </section>
         </main>
     </div>

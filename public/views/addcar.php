@@ -67,17 +67,17 @@
                     <label for="cars" class= "makeAndModel">Choose Make and Model</label>
                     <select name="cars" id="cars" style = "width:30%">
                         <optgroup label="Mercedes-Benz">
-                            <option value="C-Class">C-Class</option>
-                            <option value="E-Class">E-Class</option>
+                            <option value="Mercedes-Benz C-Class">C-Class</option>
+                            <option value="Mercedes-Benz E-Class">E-Class</option>
                         </optgroup>
                         <optgroup label="BMW">
-                            <option value="3 Series">3 Series</option>
-                            <option value="5 Series">5 Series</option>
+                            <option value="BMW 3 Series">3 Series</option>
+                            <option value="BMW 5 Series">5 Series</option>
                         </optgroup>
                         <optgroup label="Mazda">
-                            <option value="MX-3">MX-3</option>
-                            <option value="MX-5">MX-5</option>
-                            <option value="RX-8">RX-8</option>
+                            <option value="Mazda MX-3">MX-3</option>
+                            <option value="Mazda MX-5">MX-5</option>
+                            <option value="Mazda RX-8">RX-8</option>
                         </optgroup>
                         <optgroup label="Other">
                             <option value="Other Make and Model">Other Make and Model</option>

@@ -1,6 +1,7 @@
 <?php
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Project.php';;
+require_once __DIR__.'/../repository/ProjectRepository.php';
 
 
 class ProjectController extends AppController
@@ -10,6 +11,19 @@ class ProjectController extends AppController
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/img/uploads/';
     private $messages = [];
+    private $projectRepository;
+
+    public function __construct()
+    {
+
+        parent::__construct();
+        $this->projectRepository = new ProjectRepository();
+    }
+    public function advertisements (){
+
+        $projects = $this->projectRepository->getProjects();
+        $this->render('advertisement', ['projects' => $projects]);
+    }
 
     public function addProject()
     {
@@ -23,10 +37,14 @@ class ProjectController extends AppController
             $project = new Project($_POST['title'],$_POST['description'],$_POST['cars'],$_POST['Millage'],$_POST['ProductionYear'],$_POST['Fuel'],$_POST['Price']
                 ,$_FILES['file']['name']);
 
-            return $this->render('advertisement', ['messages'=>$this->messages, 'project'=> $project]);
+            $this->projectRepository->addProject($project);
+
+            return $this->render('advertisement', [
+                'messages'=>$this->messages, 'project'=> $project]);
         }
 
-        $this->render('addcar', ['messages'=>$this->messages]);
+        $this->render('addcar', [
+            'projects' => $this->projectRepository->getProject(),'messages'=>$this->messages]);
     }
 
     private function validate(array $file): bool
