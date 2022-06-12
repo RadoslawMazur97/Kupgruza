@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel = "stylesheet" type = "text/css" href = "public/css/home.css">
-    <title>HOME PAGE</title>
+    <title>Add Car</title>
 
 </head>
 
@@ -11,7 +11,7 @@
 
 
         <div class = "login-container">
-            <h1 style = "text-align: center; color:white">Find Your Perfect Drift-Car</h1>
+            <h1 style = "text-align: center; color:white">Sell Your Perfect Drift-Car</h1>
             <form class = "login">
                 <label for="cars" class= "makeAndModel">Choose Make and Model</label>
                 <select name="cars" id="cars">
@@ -32,21 +32,19 @@
                     <option value="Other Make and Model">Other Make and Model</option>
                   </optgroup>
                 </select>
-                <input name = "Min Year" type = "number" min ="1970" max ="2022" placeholder = "Min Year">
-                <input name = "Max Year" type = "number" min ="1970" max ="2022" placeholder = "Max Year">
-                <input name = "Min Price" type = "number" min ="1" placeholder = "Min Price">
-                <input name = "Max Price" type = "number" min ="1" placeholder = "Max Price">
+                <input name = "Production Year" type = "number" value ="1991" min ="1970" max ="2022" placeholder = "Production Year">
+                <input name = "Price" type = "number" placeholder = "Price">
+                <input name = "Millage" type = "number" placeholder = "Millage">
                 <select name="Fuel" id="Fuel">
                     <option value="Gasoline">Gasoline</option>
                     <option value="Diesel">Diesel</option>
                     <option value="LPG">LPG</option>
                     </select>
-                    <button>More Options</button>
-                    <button>SEARCH</button>
+                    <button>ADD CAR</button>
              </form>
         </div>
         <div class = "logo">
-            <img src="public/img/logo.svg">
+            <img src="public/img/logo.svg">          
         </div>
     </div>
 </body>

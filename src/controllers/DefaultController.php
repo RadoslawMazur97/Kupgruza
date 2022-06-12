@@ -21,9 +21,9 @@ class DefaultController extends AppController {
         $this->render('addcar');
  
      }
-     public function homepage () {
+     public function search () {
 
-        $this->render('homepage');
+        $this->render('search');
  
      }
  

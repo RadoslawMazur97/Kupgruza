@@ -46,7 +46,7 @@
              </form>
         </div>
         <div class = "logo">
-            <img src="public/img/logo.svg">
+            <img src="public/img/logo.svg">          
         </div>
     </div>
 </body>

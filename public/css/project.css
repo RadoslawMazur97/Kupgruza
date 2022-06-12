@@ -43,6 +43,22 @@ nav{
     justify-content: flex-start;
 
 }
+.addcar-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.description {
+    background-color:royalblue;
+    margin:1em;
+    width:50%
+}
 
 @media only screen and (max-device-width: 420px) {
 
@@ -62,16 +78,16 @@ nav{
 
     nav{
         flex-direction: column;
-        height:35%;
+        height:40%;
         width:100%
     }
     nav > img {
-        width:50%;
+        width:40%;
         margin:1em auto;
     }
  .button{
-     width:100%;
-     padding: 0.5em;
+     width:70%;
+     margin:auto;
      
  }
 
@@ -98,8 +114,19 @@ nav{
     form {
         width:100%;
     }
-    .add-car {
+    .add-car-button {
         width: 40%;
     }
 
+    .addcar-container {
+        width:150vw;
+        height:60vh;
+    }
+    form.addcar{
+        width:80%;
+    }
+
 }
+
+
+

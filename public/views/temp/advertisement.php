@@ -11,7 +11,7 @@
 
     <div class = "base-container">
         <nav>
-            <img src="public/img/logo.svg">
+            <img src="public/img/logo.svg">  
             <ul> 
                 <li>
                     <i class="fa-solid fa-car"></i>
@@ -26,14 +26,6 @@
                     <a href ="#" class = "button">Notifications</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href ="#" class = "button">Advance Search</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    <a href ="#" class = "button">User Management</a>
-                </li>
-                <li>
                     <i class="fa-solid fa-gears"></i>
                     <a href ="#" class = "button">Settings</a>
                 </li>
@@ -46,7 +38,7 @@
                     <input placeholder ="search car">
                 </form>
             </div>
-                <div class ="add-car-button">
+                <div class ="add-car">
                     <i class="fa-solid fa-plus"></i>
                     add Car
                 </div>
@@ -54,10 +46,10 @@
             </header>
             <section class = "projects">
                 <div id = "project-1"> 
-                    <img src ="public/img/uploads/<?= $project->getImage()?>">
+                    <img src ="public/img/uploads/foto_manipulacja.PNG">
                     <div>
-                        <h2><?= $project->getTitle()?></h2>
-                        <p><?= $project->getDescription()?></p>
+                        <h2>Title</h2>
+                        <p>description</p>
                     </div>
                     
                 </div>

@@ -10,7 +10,7 @@
     <div class = "container">
 
         <div class = "logo">
-            <img src="public/img/logo.svg">          
+            <img src="public/img/logo.svg">
         </div>
         <div class = "login-container">
             <form class = "login" action="login" method ="POST">
@@ -27,7 +27,7 @@
             <input name = "password" type = "password" placeholder = "password">
             <button type = "submit">LOGIN</button>
             <div class = "register-text">            
-                <h3 color:white>Don't have account yet? Register</h3>
+                <h3>Don't have account yet? Register</h3>
             </div>
 
             <button>REGISTER</button>

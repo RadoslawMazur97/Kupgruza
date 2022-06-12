@@ -55,17 +55,10 @@
         <section class = "AddCarSection">
 
             <div class = "addcar-container">
-                <form class = "addcar" action="addProject" method="POST" ENCTYPE="multipart/form-data">
-                    <h1 style = "text-align: center; color:white">Sell Your Perfect Drift-Car</h1>
-                    <?php if(isset($messages)) {
-                        foreach ($messages as $message){
-                            echo $message;
-                        }
-
-                    }
-                    ?>
+                <form class = "addcar">
+                    <h1 style = "text-align: center; color:white">Find Your Perfect Drift-Car</h1>
                     <label for="cars" class= "makeAndModel">Choose Make and Model</label>
-                    <select name="cars" id="cars" style = "width:30%">
+                    <select name="cars" id="cars">
                         <optgroup label="Mercedes-Benz">
                             <option value="C-Class">C-Class</option>
                             <option value="E-Class">E-Class</option>
@@ -83,19 +76,17 @@
                             <option value="Other Make and Model">Other Make and Model</option>
                         </optgroup>
                     </select>
-                    <input name = "ProductionYear" type = "number" value ="1991" min ="1970" max ="2022" placeholder = "Production Year">
-                    <input name = "Price" type = "number" placeholder = "Price">
-                    <input name = "Millage" type = "number" placeholder = "Millage">
-                    <select name="Fuel" id="Fuel" style = "width:30%">
+                    <input name = "Min Year" type = "number" min ="1970" max ="2022" placeholder = "Min Year">
+                    <input name = "Max Year" type = "number" min ="1970" max ="2022" placeholder = "Max Year">
+                    <input name = "Min Price" type = "number" min ="1" placeholder = "Min Price">
+                    <input name = "Max Price" type = "number" min ="1" placeholder = "Max Price">
+                    <select name="Fuel" id="Fuel">
                         <option value="Gasoline">Gasoline</option>
                         <option value="Diesel">Diesel</option>
                         <option value="LPG">LPG</option>
                     </select>
-                    <input name="title" type="text" placeholder="Title">
-                    <input name="description" type="text" placeholder="Description">
-
-                    <input type="file" name="file"/>
-                    <button>ADD CAR</button>
+                    <button>More Options</button>
+                    <button>SEARCH</button>
                 </form>
             </div>
         </section>

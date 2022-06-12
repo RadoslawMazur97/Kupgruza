@@ -8,10 +8,9 @@ class SecurityController extends AppController
 
     $user = new User('jsnow@pk.edu.pl', 'admin', 'John', 'Snow');
 
-    if($this->isPost()){
-        return $this->login('login');
-    }
-
+        if(!$this->isPost()){
+            return $this->render('login');
+        }
     $email = $_POST["email"];
     $password = $_POST["password"];
 
@@ -27,6 +26,5 @@ class SecurityController extends AppController
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/advertisement");
     }
-
 
 }
