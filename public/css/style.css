@@ -42,7 +42,6 @@ form.login {
 
 button{
 
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     mix-blend-mode: overlay;
     border: 1px solid #707070;
@@ -84,6 +83,8 @@ form.addcar {
     color:white;
     opacity:1;
 }
+
+
 
 @media only screen and (max-device-width: 420px) {
     .container {
@@ -139,6 +140,7 @@ main{
 nav > img{
     width: 80%;
     margin: 2em auto;
+
 }
 
 a {

@@ -15,7 +15,7 @@
             <ul> 
                 <li>
                     <i class="fa-solid fa-car"></i>
-                    <a href ="#" class = "button">Advertisements</a>
+                    <a href ="advertisements" class = "button">Advertisements</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-comment"></i>
@@ -27,7 +27,7 @@
                 </li>
                 <li>
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href ="#" class = "button">Advance Search</a>
+                    <a href ="search" class = "button">Advance Search</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-user"></i>
@@ -47,18 +47,20 @@
                 </form>
             </div>
                 <div class ="add-car-button">
-                    <i class="fa-solid fa-plus"></i>
-                    add Car
+                    <i href = "addcar" class="fa-solid fa-plus"></i>
+                    <a href ="addcar" class ="addbuton">ADD CAR</a>
                 </div>
 
             </header>
             <section class = "projects">
-                <?php foreach($projects as $project): ?>
+                <?php if(!empty($projects))
+                    foreach($projects as $project): ?>
                 <div id = "project-1"> 
                     <img src ="public/img/uploads/<?= $project->getImage() ?>">
                     <div>
-                        <h2><?= $project->getTitle(); ?></h2>
+                        <h3><?= $project->getTitle(); ?></h3>
                         <p><?= $project->getDescription(); ?></p>
+                        <p> <?=$project->getModel();?><?=" ".$project->getProductionYear() ?> <?=$project->getFuel(); ?></p>
                     </div>
 
                 </div>

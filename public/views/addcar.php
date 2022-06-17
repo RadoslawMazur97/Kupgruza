@@ -47,8 +47,8 @@
                 </form>
             </div>
             <div class ="add-car-button">
-                <i class="fa-solid fa-plus"></i>
-                ADD CAR
+                <i href = "addcar" class="fa-solid fa-plus"></i>
+                <a href ="addcar" class ="addbuton">ADD CAR</a>
             </div>
 
         </header>

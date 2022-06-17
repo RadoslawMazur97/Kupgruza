@@ -40,7 +40,8 @@ class ProjectController extends AppController
             $this->projectRepository->addProject($project);
 
             return $this->render('advertisement', [
-                'messages'=>$this->messages, 'project'=> $project]);
+                'messages'=>$this->messages,
+                'projects' => $this->projectRepository->getProjects()]);
         }
 
         $this->render('addcar', [

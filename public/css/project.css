@@ -9,13 +9,13 @@ section {
 }
 
 .projects>div>img{
-    height: 50%;
+    height: 70%;
     width: 100%;
     object-fit:cover;
     border-radius: 1em 1em 0 0;
 }
 .projects>div>div{
-    height: 50%;
+    height: 30%;
     color: #2699FB;
     margin: 1em;
 
@@ -29,7 +29,8 @@ section {
 
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
-    height: 400px;
+    height: 55vh;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,6 +59,15 @@ nav{
     background-color:royalblue;
     margin:1em;
     width:50%
+}
+.addbuton{
+    color:white;
+    text-decoration: none;
+    border:none;
+    border-radius: 32px;
+    width: 50%;
+    margin: 1em;
+
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -89,7 +99,7 @@ nav{
      width:70%;
      margin:auto;
      
- }
+    }
 
     li {
         display:flex;
@@ -124,6 +134,11 @@ nav{
     }
     form.addcar{
         width:80%;
+    }
+
+    .projects>div {
+
+        width:100%;
     }
 
 }

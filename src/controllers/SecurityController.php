@@ -34,7 +34,7 @@ class SecurityController extends AppController
         }
         //return $this->render('advertisement');
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/advertisement");
+        header("Location: {$url}/advertisements");
     }
 
 }
