@@ -61,6 +61,19 @@
                         <h3><?= $project->getTitle(); ?></h3>
                         <p><?= $project->getDescription(); ?></p>
                         <p> <?=$project->getModel();?><?=" ".$project->getProductionYear() ?> <?=$project->getFuel(); ?></p>
+                        <?php
+                        //$isAdmin=0;
+                        //$isAdmin=if(isset($_COOKIE['isAdminCookie']));
+                        if(isset($_COOKIE['isAdminCookie'])){
+                            $isAdmin=$_COOKIE['isAdminCookie'];
+                            if($isAdmin){
+                        ?>
+                        <h3>test</h3>
+                            <?php         }
+                        }
+
+                        ?>
+
                     </div>
 
                 </div>

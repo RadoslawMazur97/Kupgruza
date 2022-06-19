@@ -31,20 +31,6 @@ img {
     width: 70%;
 }
 
-form.login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 45vh;
-    background: #411ca7 0% 0% no-repeat padding-box;
-    mix-blend-mode: luminosity;
-    border: 1px solid #707070;
-    border-radius: 77px;
-
-}
 
 button{
 

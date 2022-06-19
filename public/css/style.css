@@ -32,7 +32,20 @@ form.login {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 40vh;
+    height: 45vh;
+    background: #114058 0% 0% no-repeat padding-box;
+    mix-blend-mode: luminosity;
+    border: 1px solid #707070;
+    border-radius: 77px;
+
+}
+form.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
     background: #114058 0% 0% no-repeat padding-box;
     mix-blend-mode: luminosity;
     border: 1px solid #707070;
@@ -79,6 +92,26 @@ form.addcar {
     color: white;
 
 }
+.login>a{
+    width:49%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    mix-blend-mode: overlay;
+
+    color:black;
+    margin: 1em;
+    line-height: 1.5em;
+}
+.register>a{
+    width:49%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    mix-blend-mode: overlay;
+
+    color:black;
+    margin: 1em;
+    line-height: 1.5em;
+}
+
+
 ::placeholder {
     color:white;
     opacity:1;
@@ -90,6 +123,7 @@ form.addcar {
     .container {
         flex-direction: column;
         width: 100vw;
+        height:150vh;
  
     }
 
@@ -241,4 +275,12 @@ header {
     color:gray;
     margin:0;
     box-sizing: border-box;
+}
+
+.no-valid {
+    border: 3px solid black;
+    border-radius: 1em;
+    box-shadow: 0 0 0.1em black;
+    outline: none;
+
 }

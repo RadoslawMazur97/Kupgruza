@@ -45,8 +45,19 @@ class ProjectRepository extends Repository
                 VALUES (?,?,?,?,?,?,?,?,?,?)
                 
             ');
-            $assignedById=1;
-            //DOPOPRAWY
+            $useremail=$_COOKIE['userCookie'];
+            //$assignedById=1;
+
+            $stmt_temp = $this->database->connect()->prepare(
+                'SELECT id FROM users where email = ?
+'
+
+            );
+            $stmt_temp->execute([
+                $useremail
+            ]);
+            $row = $stmt_temp->fetch(PDO::FETCH_ASSOC);
+            $assignedById=$row['id'];
             $stmt->execute([
                     $project->getTitle(),
                     $project->getModel(),
@@ -85,6 +96,18 @@ class ProjectRepository extends Repository
                 $project['image']
 
             );
+            $useremail=$_COOKIE['userCookie'];
+
+            $stmt_temp = $this->database->connect()->prepare(
+                'SELECT is_admin FROM users where email = ?
+                        '
+            );
+            $stmt_temp->execute([
+                $useremail
+            ]);
+            $row = $stmt_temp->fetch(PDO::FETCH_ASSOC);
+            $isAdmin=$row['is_admin'];
+            setcookie("isAdminCookie", $isAdmin, time() + (86400 * 1), "/"); // 86400 = 1 day
 
         }
 
@@ -92,4 +115,21 @@ class ProjectRepository extends Repository
         return $result;
 
     }
+    public function getProjectByTitle(string $searchString)
+    {
+        $searchString = '%'.strtolower($searchString).'%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM advertisements WHERE LOWER(title) LIKE :search
+            
+        ');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+
 }

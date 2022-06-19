@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <head>
     <link rel = "stylesheet" type = "text/css" href = "public/css/style.css">
@@ -29,8 +31,7 @@
             <div class = "register-text">            
                 <h3>Don't have account yet? Register</h3>
             </div>
-
-            <button>REGISTER</button>
+                <a href ="register" class="button"> REGISTER </a>
 
              </form>
         </div>

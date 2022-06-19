@@ -48,6 +48,15 @@ class ProjectController extends AppController
             'projects' => $this->projectRepository->getProject(),'messages'=>$this->messages]);
     }
 
+    public function search()
+    {
+        //TODO
+
+
+    }
+
+
+
     private function validate(array $file): bool
     {
         if($file['size'] > self::MAX_FILE_SIZE)

@@ -8,6 +8,11 @@ class DefaultController extends AppController {
         $this->render('login');
  
      }
+    public function logout () {
+
+        $this->render('logout');
+
+    }
 
     public function advertisement (){
         $this->render('advertisements');
@@ -21,12 +26,7 @@ class DefaultController extends AppController {
         $this->render('addcar');
  
      }
-     public function search () {
 
-        $this->render('search');
- 
-     }
- 
  
 
 }

@@ -15,7 +15,7 @@
         <ul>
             <li>
                 <i class="fa-solid fa-car"></i>
-                <a href ="#" class = "button">Advertisements</a>
+                <a href ="advertisements" class = "button">Advertisements</a>
             </li>
             <li>
                 <i class="fa-solid fa-comment"></i>
@@ -27,7 +27,7 @@
             </li>
             <li>
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <a href ="#" class = "button">Advance Search</a>
+                <a href ="search" class = "button">Advance Search</a>
             </li>
             <li>
                 <i class="fa-solid fa-user"></i>
