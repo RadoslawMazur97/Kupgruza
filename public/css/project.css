@@ -14,6 +14,16 @@ section {
     object-fit:cover;
     border-radius: 1em 1em 0 0;
 }
+
+
+.addbutton{
+    color:red;
+    width:90%;
+    line-height:1.5em;
+
+}
+
+
 .projects>div>div{
     height: 30%;
     color: #2699FB;
@@ -24,12 +34,27 @@ section {
     justify-content: space-around;
     
 }
+.delete-car-button{
+    height:12%;
+    background:#2699FB;
+    border-radius: 32px;
+}
+.deletebuton{
+    color:red;
+    width:100%;
+    font-weight: bolder;
+    font-size:larger;
+    mix-blend-mode: color;
+    background:none;
+    margin: auto;
+    line-height:1em;
+}
 
 .projects>div {
 
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
-    height: 55vh;
+    height: 60vh;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -69,6 +94,8 @@ nav{
     margin: 1em;
 
 }
+
+
 
 
 
@@ -117,6 +144,7 @@ nav{
         position:relative;
     
     }
+
     main{
         width:100vw;
     }

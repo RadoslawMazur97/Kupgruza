@@ -1,3 +1,11 @@
+<?php
+$userCookie = "userCookie";
+if(!isset($_COOKIE[$userCookie])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/login");
+}
+?>
+
 <!DOCTYPE html>
 <head xmlns:color="http://www.w3.org/1999/xhtml">
     <link rel = "stylesheet" type = "text/css" href = "public/css/style.css">

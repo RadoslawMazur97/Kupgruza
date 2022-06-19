@@ -15,6 +15,6 @@ Routing::get('logout', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('addProject', 'ProjectController');
 Routing::post('register', 'SecurityController');
-Routing::post('search', 'ProjectController');
+Routing::post('deleteProject', 'ProjectController');
 
 Routing::run($path);

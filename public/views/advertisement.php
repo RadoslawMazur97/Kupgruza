@@ -1,8 +1,18 @@
+<?php
+$userCookie = "userCookie";
+if(!isset($_COOKIE[$userCookie])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/login");
+}
+
+?>
 <!DOCTYPE html>
 <head>
     <link rel = "stylesheet" type = "text/css" href = "public/css/style.css">
     <link rel = "stylesheet" type = "text/css" href = "public/css/project.css">
     <script src="https://kit.fontawesome.com/251a1d7ebb.js" crossorigin="anonymous"></script>
+    <script type ="text/javascript" src="./public/js/search.js" defer></script>
+    <script type ="text/javascript" src="./public/js/delproject.js" defer></script>
     <title>Advertisements</title>
 
 </head>
@@ -34,6 +44,10 @@
                     <a href ="#" class = "button">User Management</a>
                 </li>
                 <li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href ="logout" class = "button">Logout</a>
+                </li>
+                <li>
                     <i class="fa-solid fa-gears"></i>
                     <a href ="#" class = "button">Settings</a>
                 </li>
@@ -42,9 +56,7 @@
         <main>
             <header>
                 <div class ="search-bar">
-                <form>
                     <input placeholder ="search car">
-                </form>
             </div>
                 <div class ="add-car-button">
                     <i href = "addcar" class="fa-solid fa-plus"></i>
@@ -55,24 +67,25 @@
             <section class = "projects">
                 <?php if(!empty($projects))
                     foreach($projects as $project): ?>
-                <div id = "project-1"> 
+                <div id = "<?= $project->getId() ?>">
                     <img src ="public/img/uploads/<?= $project->getImage() ?>">
                     <div>
                         <h3><?= $project->getTitle(); ?></h3>
-                        <p><?= $project->getDescription(); ?></p>
+                        <h4><?= $project->getDescription(); ?></h4>
                         <p> <?=$project->getModel();?><?=" ".$project->getProductionYear() ?> <?=$project->getFuel(); ?></p>
                         <?php
-                        //$isAdmin=0;
-                        //$isAdmin=if(isset($_COOKIE['isAdminCookie']));
                         if(isset($_COOKIE['isAdminCookie'])){
                             $isAdmin=$_COOKIE['isAdminCookie'];
                             if($isAdmin){
-                        ?>
-                        <h3>test</h3>
+                                ?>
+                                <div class="social-section">
+                                    <i class="fa-solid fa-trash"></i>
+                                </div>
                             <?php         }
                         }
 
                         ?>
+
 
                     </div>
 
@@ -82,3 +95,20 @@
         </main>
     </div>
 </body>
+
+
+
+<template id="project-template">
+    <div id = "project-1">
+        <img src ="">
+        <div>
+            <h3>title</h3>
+            <h4>description</h4>
+            <p>model</p>
+
+
+        </div>
+
+    </div>
+
+</template>

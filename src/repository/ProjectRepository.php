@@ -7,7 +7,6 @@ class ProjectRepository extends Repository
 {
     public function getProject (int $id): ?Project
     {
-        //TODO
         $stmt = $this->database->connect()->prepare(
            'SELECT * FROM advertisements WHERE id = :id'
 
@@ -93,21 +92,10 @@ class ProjectRepository extends Repository
                 $project['productionyear'],
                 $project['fuel'],
                 $project['price'],
-                $project['image']
+                $project['image'],
+                $project['id']
 
             );
-            $useremail=$_COOKIE['userCookie'];
-
-            $stmt_temp = $this->database->connect()->prepare(
-                'SELECT is_admin FROM users where email = ?
-                        '
-            );
-            $stmt_temp->execute([
-                $useremail
-            ]);
-            $row = $stmt_temp->fetch(PDO::FETCH_ASSOC);
-            $isAdmin=$row['is_admin'];
-            setcookie("isAdminCookie", $isAdmin, time() + (86400 * 1), "/"); // 86400 = 1 day
 
         }
 
@@ -120,7 +108,7 @@ class ProjectRepository extends Repository
         $searchString = '%'.strtolower($searchString).'%';
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM advertisements WHERE LOWER(title) LIKE :search
+            SELECT * FROM advertisements WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
             
         ');
         $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
@@ -129,6 +117,14 @@ class ProjectRepository extends Repository
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    }
+
+    public function deleteProject(int $id){
+        $stmt = $this->database->connect()->prepare('
+            DELETE FROM advertisements WHERE id = :id
+         ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
     }
 
 

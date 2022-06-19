@@ -10,8 +10,9 @@ class Project
     private $fuel;
     private $price;
     private $image;
+    private $id;
 
-    public function __construct($title, $description,$model, $millage, $productionYear, $fuel, $price, $image)
+    public function __construct($title, $description,$model, $millage, $productionYear, $fuel, $price, $image , $id=null)
     {
         $this->title = $title;
         $this->description = $description;
@@ -21,6 +22,13 @@ class Project
         $this->fuel = $fuel;
         $this->price = $price;
         $this->image = $image;
+        $this->id=$id;
+    }
+
+
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     public function getModel():string
