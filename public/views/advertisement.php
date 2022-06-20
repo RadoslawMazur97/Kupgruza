@@ -45,7 +45,7 @@ if(!isset($_COOKIE[$userCookie])) {
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <a href ="logout" class = "button">Logout</a>
+                    <a href ="login" class = "button">Logout</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-gears"></i>

@@ -1,4 +1,14 @@
+<?php
+$userCookie = "userCookie";
+$isAdminCookie = "isAdminCookie";
+if(isset($_COOKIE[$userCookie])) {
+    setcookie($userCookie, "", time()-3600);
+}
+if(isset($_COOKIE[$isAdminCookie])) {
+    setcookie($isAdminCookie, "", time()-3600);
+}
 
+?>
 
 <!DOCTYPE html>
 <head>
