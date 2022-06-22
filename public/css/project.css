@@ -104,11 +104,6 @@ nav{
     *{
         font-size: 35px;
     }
-    .search-bar {
-
-
-        padding:0 0.5em
-    }
 
 
     .base-container{
@@ -149,6 +144,7 @@ nav{
         width:100vw;
     }
     header{
+        height:10%;
         padding: 0.5em 0.5em;
     }
     form {
@@ -160,7 +156,7 @@ nav{
 
     .addcar-container {
         width:150vw;
-        height:60vh;
+        height:120vh;
     }
     form.addcar{
         width:80%;

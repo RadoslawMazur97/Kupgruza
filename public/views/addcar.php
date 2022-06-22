@@ -50,14 +50,13 @@ if(!isset($_COOKIE[$userCookie])) {
     <main>
         <header>
             <div class ="search-bar">
-                <form>
-                    <input placeholder ="search car">
-                </form>
+                <input placeholder ="search car">
             </div>
             <div class ="add-car-button">
                 <i href = "addcar" class="fa-solid fa-plus"></i>
                 <a href ="addcar" class ="addbuton">ADD CAR</a>
             </div>
+
 
         </header>
         <section class = "AddCarSection">
@@ -99,6 +98,8 @@ if(!isset($_COOKIE[$userCookie])) {
                         <option value="Diesel">Diesel</option>
                         <option value="LPG">LPG</option>
                     </select>
+                    <input name="city" type="text" placeholder="City">
+                    <input name="zipcode" type="text" placeholder="Zip Code">
                     <input name="title" type="text" placeholder="Title">
                     <input name="description" type="text" placeholder="Description">
 

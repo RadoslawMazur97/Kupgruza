@@ -35,7 +35,7 @@ class ProjectController extends AppController
             );
 
             $project = new Project($_POST['title'],$_POST['description'],$_POST['cars'],$_POST['Millage'],$_POST['ProductionYear'],$_POST['Fuel'],$_POST['Price']
-                ,$_FILES['file']['name']);
+                ,$_FILES['file']['name'],$_POST['city'],$_POST['zipcode']);
 
             $this->projectRepository->addProject($project);
 

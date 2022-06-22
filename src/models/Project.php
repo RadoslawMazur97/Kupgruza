@@ -11,8 +11,12 @@ class Project
     private $price;
     private $image;
     private $id;
+    private $city;
+    private $zipcode;
 
-    public function __construct($title, $description,$model, $millage, $productionYear, $fuel, $price, $image , $id=null)
+
+
+    public function __construct($title, $description,$model, $millage, $productionYear, $fuel, $price, $image , $city, $zipcode, $id=null)
     {
         $this->title = $title;
         $this->description = $description;
@@ -23,6 +27,8 @@ class Project
         $this->price = $price;
         $this->image = $image;
         $this->id=$id;
+        $this->city=$city;
+        $this->zipcode = $zipcode;
     }
 
 
@@ -125,6 +131,24 @@ class Project
         $this->image = $image;
     }
 
+    public function getCity()
+    {
+        return $this->city;
+    }
 
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    public function setZipcode($zipcode): void
+    {
+        $this->zipcode = $zipcode;
+    }
 
 }

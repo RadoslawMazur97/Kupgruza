@@ -40,8 +40,8 @@ class ProjectRepository extends Repository
         {
             $date = new DateTime();
             $stmt = $this->database->connect()->prepare('
-                  INSERT INTO advertisements (title,model,description,millage,productionYear,fuel,price,image,created_at,id_assigned_by)
-                VALUES (?,?,?,?,?,?,?,?,?,?)
+                  INSERT INTO advertisements (title,model,description,millage,productionYear,fuel,price,image,created_at,id_assigned_by, city,zipcode)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
                 
             ');
             $useremail=$_COOKIE['userCookie'];
@@ -67,7 +67,10 @@ class ProjectRepository extends Repository
                     $project->getPrice(),
                     $project->getImage(),
                     $date->format('Y-m-d'),
-                    $assignedById
+                    $assignedById,
+                    $project->getCity(),
+                    $project->getZipcode(),
+
                 ]
 
 
@@ -93,6 +96,8 @@ class ProjectRepository extends Repository
                 $project['fuel'],
                 $project['price'],
                 $project['image'],
+                $project['city'],
+                $project['zipcode'],
                 $project['id']
 
             );

@@ -84,7 +84,7 @@ form.addcar {
     justify-content: center;
     align-items: center;
     width: 65%;
-    height: 70vh;
+    height: 80%;
     background: transparent linear-gradient(124deg, #186DD2 0%, #293D9F 100%) 0% 0% no-repeat padding-box;
     mix-blend-mode: luminosity;
     border: 1px solid #707070;
@@ -119,36 +119,6 @@ form.addcar {
 
 
 
-@media only screen and (max-device-width: 420px) {
-    .container {
-        flex-direction: column;
-        width: 100vw;
-        height:150vh;
- 
-    }
-
-    *{
-        font-size: 35px;
-    }
-    .login-container{
-        width: 100vw;
-    }
-    .logo {
-        width: 80vw;
-    }
-    form {
-            margin: auto;
-            width: 80vw;
-        }
-    img {
-        height: 20em;
-        width: 20em;
-    }
-    form.login{
-        height:100%;
-    }
-
-}
 
 
 .base-container{
@@ -259,10 +229,11 @@ header {
 }
 .add-car-button > i {
     padding: 1em;
+    margin-top: 0.5em;
 }
 
 .search-bar {
-    width:70%
+    width:60%
 
 }
 .search-bar>input {
@@ -283,5 +254,54 @@ header {
     border-radius: 1em;
     box-shadow: 0 0 0.1em black;
     outline: none;
+
+}
+.search-bar{
+    margin-top: 0.5em;
+}
+
+
+@media only screen and (max-device-width: 420px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        height:150vh;
+
+    }
+
+    *{
+        font-size: 35px;
+    }
+    .login-container{
+        width: 100vw;
+    }
+    .logo {
+        width: 80vw;
+    }
+    form {
+        margin: auto;
+        width: 80vw;
+    }
+    img {
+        height: 20em;
+        width: 20em;
+    }
+    form.login{
+        height:100%;
+    }
+
+    .add-car-button > i {
+        padding:0;
+        margin-top:0;
+
+    }
+    .add-car-button{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-bar {
+        padding: 0.25em 0 0 0.25em;
+    }
 
 }
