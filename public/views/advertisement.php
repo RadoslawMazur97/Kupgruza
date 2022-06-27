@@ -76,7 +76,7 @@ if(!isset($_COOKIE[$userCookie])) {
                         <?php
                         if(isset($_COOKIE['isAdminCookie'])){
                             $isAdmin=$_COOKIE['isAdminCookie'];
-                            if($isAdmin){
+                            if($isAdmin>=2){
                                 ?>
                                 <div class="social-section">
                                     <i class="fa-solid fa-trash"></i>

@@ -42,6 +42,10 @@ if(!isset($_COOKIE[$userCookie])) {
                 <a href ="#" class = "button">User Management</a>
             </li>
             <li>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <a href ="login" class = "button">Logout</a>
+            </li>
+            <li>
                 <i class="fa-solid fa-gears"></i>
                 <a href ="#" class = "button">Settings</a>
             </li>

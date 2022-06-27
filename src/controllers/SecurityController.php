@@ -37,7 +37,7 @@ class SecurityController extends AppController
     }
     if(password_verify($password,$user->getPassword())) {
         setcookie("userCookie", $user->getEmail(), time() + (86400 * 1), "/");
-        setcookie("isAdminCookie", $user->getIsAdmin(), time() + (86400 * 1), "/"); // 86400 = 1 day
+        setcookie("isAdminCookie", $user->getUser_role(), time() + (86400 * 1), "/"); // 86400 = 1 day
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/advertisements");
     }

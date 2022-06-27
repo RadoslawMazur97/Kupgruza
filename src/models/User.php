@@ -7,30 +7,30 @@ class User
     private $name;
     private $surname;
     private $phone;
-    private $is_admin;
+    private $user_role;
 
     public function __construct(
         string $email,
         string $password,
         string $name,
         string $surname,
-        int $is_admin = 0
+        int $user_role = 1
     ) {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
-        $this->is_admin =$is_admin;
+        $this->user_role =$user_role;
     }
 
-    public function getIsAdmin(): int
+    public function getUser_role(): int
     {
-        return $this->is_admin;
+        return $this->user_role;
     }
 
-    public function setIsAdmin(int $is_admin): void
+    public function setUser_role(int $user_role): void
     {
-        $this->is_admin = $is_admin;
+        $this->user_role = $user_role;
     }
 
     public function getEmail(): string

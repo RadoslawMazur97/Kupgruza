@@ -27,7 +27,7 @@ class UserRepository extends Repository
             $user['password'],
             $user['name'],
             $user['surname'],
-            $user['is_admin']
+            $user['user_role']
         );
     }
     public function addUser(User $user)
@@ -44,7 +44,7 @@ class UserRepository extends Repository
         ]);
 
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users (email, password, id_user_details, is_admin)
+            INSERT INTO users (email, password, id_user_details, user_role)
             VALUES (?, ?, ?, ?)
         ');
 
@@ -52,7 +52,7 @@ class UserRepository extends Repository
             strtolower($user->getEmail()),
             $user->getPassword(),
             $this->getUserDetailsId($user),
-            0
+            $user->getUser_role()
         ]);
     }
 
