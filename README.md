@@ -1,10 +1,10 @@
 # KupGruza
-> KupGruza is a web app which allows you to sell or buy a dream driftcar.
+KupGruza is a web app which allows you to sell or buy a dream driftcar.
 <!-- > Live demo [_here_](https://www.example.com). To be linked. -->
 
 
 ## General Information
-![Example screenshot](./public/img/readmescreenshot.png)
+![Example screenshot](/public/img/readmescreenshot.png)
 
 
 ## Technologies Used
@@ -27,7 +27,7 @@
 
 ## Setup
 Clone this repo on your desktop, ideally create a database in a cloud and create config.php file in a format:
-<?php
+> <?php
 
 const USERNAME = 'username';
 const PASSWORD = 'password';
