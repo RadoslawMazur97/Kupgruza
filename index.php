@@ -11,6 +11,8 @@ Routing::get('register', 'DefaultController');
 Routing::get('addcar', 'DefaultController');
 //Routing::get('search', 'DefaultController');
 
+
+Routing::post('search', 'ProjectController');
 Routing::post('login', 'SecurityController');
 Routing::post('addProject', 'ProjectController');
 Routing::post('register', 'SecurityController');
