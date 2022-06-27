@@ -1,29 +1,53 @@
-# README #
+# KupGruza
+> KupGruza is a web app which allows you to sell or buy a dream driftcar.
+<!-- > Live demo [_here_](https://www.example.com). To be linked. -->
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+## General Information
+![Example screenshot](./public/img/readmescreenshot.png)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+## Technologies Used
+- Docker
+- PHP 8.1
+- nginx 1.21.6
+- JavaScript
+- HTML/CSS
+- PostgreSQL
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
 
-### Contribution guidelines ###
+## Features
+- Register and login
+- Manage user roles
+- Add/Serach/Delete Car
+- Works also on mobile phones
 
-* Writing tests
-* Code review
-* Other guidelines
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+
+## Setup
+Clone this repo on your desktop, ideally create a database in a cloud and create config.php file in a format:
+<?php
+
+const USERNAME = 'username';
+const PASSWORD = 'password';
+const HOST = 'hostname';
+const DATABASE = 'database';
+
+
+## Usage
+Application was made in a purpose to sell a low-budget drift cars
+
+
+## Project Status
+Project is: _in progress_ 
+
+
+## Room for Improvement
+To do:
+- User Management
+- Edit ad
+- Create a search page
+- Create a project(car) page
+
+
